@@ -28,23 +28,16 @@
         <li><img src="asset/tv.jpg" alt="little cover"></li>
       </ul>
     </div>
-      
+        <?php
+       
+        include_once __DIR__."/controller/controllerMovie.php"; 
+        ?>
+
     <div class="grid-12">
       <h4>Notre sélection pour vous : </h4>
-      <ul>
-        <li><img src="asset/7.jpg" alt="Le comptable"></li>
-        <li><img src="asset/13.jpg" alt="Saw"></li>
-        <li><img src="asset/16.jpg" alt="Vendredi 13"></li>
-        <li><img src="asset/10.jpg" alt="Inception"></li>
-        <li><img src="asset/12.jpg" alt="Les Infiltrés"></li>
-        <li><img src="asset/14.jpg" alt="Scream"></li>
-        <li><img src="asset/1.jpg" alt="Dabbe"></li>
-        <li><img src="asset/3.jpg" alt="The Ring"></li>
-        <li><img src="asset/2.jpg" alt="Veronica"></li>
-        <li><img src="asset/4.jpg" alt="Case 39"></li>
-        <li><img src="asset/6.jpg" alt="Chucky"></li>
-        <li><img src="asset/5.jpg" alt="Bird Box"></li>
-      </ul>
+        <?php
+          include_once __DIR__ ."/template/collection.inc.php"
+        ?>
     </div>
 </main>
 <script script type="module" src="./js/app.js"></script>

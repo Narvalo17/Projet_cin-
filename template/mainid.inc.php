@@ -7,7 +7,7 @@
         <div class="form">
             <form method="get"></form>
             <label for="fname">Votre adresse mail:</label>
-            <input type="email" id="fname" name="fname" placeholder="Adresse mail">
+            <input type="email" id="fname"  name="fname" placeholder="Adresse mail">
 
             <label for="password">Votre Mot de passe:</label>
             <input type="password" id="password" name="password" placeholder="*********">
