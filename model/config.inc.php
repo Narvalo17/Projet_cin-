@@ -1,19 +1,10 @@
-<!-- pour la conexion a la base de donnée --> 
+<!--  pour la conexion a la base de donnée --> 
 
 <?php
-         try{
+       $serveur = "localhost";
+       $utilisateur = "root";
+       $mdp = "";
+       $base_de_donnees = "bdd_film";
        
-    
-        $_pdo_options[PDO::ATTR_ERRMODE] = PDO::ERRMODE_EXCEPTION;
-        $_bdd = new PDO('mysql:host=localhost;
-                        dbname=bdd_film', 
-                        'root', '',
-                        array(PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8',$_pdo_options));
-        
-        }
-        catch(Exception $e)
-        {
-        die("Error Data base de votre base ".$e->getMessage());
-        }
-
-      
+       $connexion = new PDO("mysql:host=$serveur;dbname=$base_de_donnees", $utilisateur, $mdp);
+       $connexion->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);

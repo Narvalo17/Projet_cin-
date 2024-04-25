@@ -1,8 +1,9 @@
 <?php
+
 include_once "./model/config.inc.php";
 
 class Statement{
-       
+    
 
         public function query($request){
 
@@ -11,7 +12,7 @@ class Statement{
                   }
 
     }
-
-$_newRquest = new Statement($_response = $_bdd->query('SELECT * FROM movie ORDER BY id ASC LIMIT 30'));
+    
+$_newRquest = new Statement($_response = $connexion->query('SELECT * FROM movie ORDER BY id ASC LIMIT 30'));
 
 

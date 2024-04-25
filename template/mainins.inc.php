@@ -25,7 +25,7 @@
     </section>
     
     <div class="form">
-      <form action="#" method="post">
+      <form action="inscription.php" method="post">
         <label for="fname">Nom</label>
         <input type="text" id="nom" name="name" placeholder="Votre nom">
 
@@ -38,11 +38,24 @@
         <label for="city">Votre ville:</label>
         <input type="text" id="city" name="city" placeholder="Ville">
 
-        <label for="country">Introduisez votre adresse mail:</label>
+        <label for="country">Votre Pays:</label>
         <input type="text" id="country" name="country" placeholder="Pays">
-        <button type="submit" class="btn-validate">Envoyer</button>
+        <input type="submit" value="envoyer" class="btn-validate">
      </form>
+
+     <?php
+     /*  $post = $_POST;
+      foreach ($post as $key => $value) {
+            print $key." ".$value."<br>";
+      } */
+    // Variables de connexion à la base de données
+    include_once "./model/config.inc.php";
+    include_once  "./controller/controllerClient.php";
+    
+    
+    ?>
+ 
  
     </div>
 
-    </main>
+  </main>

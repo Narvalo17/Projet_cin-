@@ -3,7 +3,6 @@
                 <li>
                     
                     <img src="<?= $_movie['cover'] ?>" alt="cover">
-                            
                 </li>
             <?php endforeach;?>
         </ul>
