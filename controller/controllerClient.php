@@ -1,23 +1,24 @@
 <?php
+        include_once "./model/config.inc.php";
 try {
-      $connexion = new PDO("mysql:host=$serveur;dbname=$base_de_donnees", $utilisateur, $mdp);
-      $connexion->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        
         
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
             
-            if (!empty($_POST["name"]) && !empty($_POST["lastname"]) && !empty($_POST["fname"]) && !empty($_POST["city"]) && !empty($_POST["country"])) {
+            if (!empty($_POST["name"]) && !empty($_POST["lastname"]) && !empty($_POST["fname"]) && !empty($_POST["mdp"]) && !empty($_POST["city"]) && !empty($_POST["country"])) {
                 
                 $nom = $_POST["name"];
                 $prenom = $_POST["lastname"];
                 $email = $_POST["fname"];
+                $mdp = $_POST["mdp"];
                 $ville = $_POST["city"];
                 $pays = $_POST["country"];
     
                 
-                $requete = $connexion->prepare("INSERT INTO user (nom, prenom, email, ville, pays) VALUES (?, ?, ?, ?, ?)");
+                $requete = $connexion->prepare("INSERT INTO user (nom, prenom, email, mdp, ville, pays) VALUES (?, ?, ?, ?, ?, ?)");
                 
                 
-                $requete->execute([$nom, $prenom, $email, $ville, $pays]);
+                $requete->execute([$nom, $prenom, $email, password_hash($mdp, PASSWORD_DEFAULT), $ville, $pays]);
     
                 
                 echo "Nouvel utilisateur ajouté avec succès.";

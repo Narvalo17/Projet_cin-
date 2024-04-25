@@ -32,8 +32,12 @@
         <label for="lastname">Prénom</label>
         <input type="text" id="lastname" name="lastname" placeholder="Votre prénom">
 
+        
         <label for="fname">Votre adresse mail:</label>
         <input type="email" id="fname" name="fname" placeholder="Adresse mail">
+        
+        <label for="mdp">Mot de passe</label>
+        <input type="password" id="mdp" name="mdp" placeholder="Mot de passe">
 
         <label for="city">Votre ville:</label>
         <input type="text" id="city" name="city" placeholder="Ville">
@@ -44,11 +48,7 @@
      </form>
 
      <?php
-     /*  $post = $_POST;
-      foreach ($post as $key => $value) {
-            print $key." ".$value."<br>";
-      } */
-    // Variables de connexion à la base de données
+    
     include_once "./model/config.inc.php";
     include_once  "./controller/controllerClient.php";
     
