@@ -1,11 +1,25 @@
 @import url(./reset.css);
+@import url(style.css);
+
 
 html {
-    background: linear-gradient(to top, rgba(2, 2, 2, 0.5)50%, rgba(0, 0, 0, 0.5)50%),
-        url(../asset/cover.jpg)no-repeat fixed center center / cover;
+    font-size: 62.5%;
+    transition-duration: 1s;
 }
-
+.theme-dark{
+    background: linear-gradient(to top, rgba(2, 2, 2, 0.5)50%, rgba(0, 0, 0, 0.5)50%),
+    url(../asset/cover.jpg)no-repeat fixed center center / cover;
+   
+   
+}
+.theme-light{
+    background: linear-gradient(to top, rgba(233, 228, 228, 0.2)10%, rgba(233, 228, 228, 0.2)10%),
+    url(../asset/cover.jpg)no-repeat fixed center center / cover;
+   
+    
+}
 body {
+    font-size: 1.6rem;
     font-family: 'Roboto', sans-serif;
     line-height: 1.6;
     margin: 0;
@@ -101,9 +115,12 @@ section img {
 
 .grid-2 ul li * {
     color: #fff;
+    user-select: none;
 
 }
-
+.grid-2 ul li p{
+    user-select: none;
+}
 .grid-2 ul li img {
     border-radius: 3rem;
 }
@@ -173,3 +190,59 @@ footer {
     bottom: 0;
     width: 100%;
 }
+.switch {
+    position: relative;
+    display: inline-block;
+    vertical-align: auto;
+    width: 56px;
+    height: 30px;
+  }
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #d5d1d1;
+    }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 23px;
+    width: 23px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  input:checked + .slider {
+    background-color: #000000;
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px #000000;
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+  
+ 
+  .slider.round {
+    border-radius: 34px; 
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
+
+  /* composant warning */
+  div:where(.swal2-container) button:where(.swal2-styled).swal2-confirm{
+    line-height: inherit;
+  }
